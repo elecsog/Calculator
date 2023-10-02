@@ -1,5 +1,6 @@
 import { Text, TouchableOpacity , View} from "react-native"
 import styled from "styled-components"
+import { useState } from 'react';
 
 
 
@@ -42,16 +43,31 @@ const Button = ({text, onPress, flex, type}) =>
 const ButtonContainer = styled.View`
     flex-direction : row;
     width : 100%;
-`
+`;
+
+const InputContainer = styled.View`
+    background-color : ${COLOR.RESULT};
+    min-height : 50px;
+    justify-content: center;
+    align-items : flex-end;
+    padding : 10px 5px;
+`;
 
 export default () => {
+    const [input, setInput] = useState(0);   // 2
+    const [currentOperator, setCurrentOperator] = useState(null);  //*
+    const [result, setResult] = useState(null);
+    const [tempInput, setTempInpput] = useState(null);
+    const [tempOperator, setTempOperator] = useState(null);
 
     return (
   
-      <View style = {{flex:1, width : 250}}>
+      <View style = {{flex:1, width : 250, justifyContent: "center"}}>
   
         {/* 결과 */}
-  
+        <InputContainer>
+            <Text style={{color:"white", fontSize :35, textAlign : "right"}}>{input}</Text>
+        </InputContainer>
   
   
   
