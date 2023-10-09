@@ -9,11 +9,7 @@ const statusBarHeight = getStatusBarHeight(true);
 const bottomSpace = getBottomSpace();
 
 export default function App() {
-  const [input, setInput] = useState(0);   // 2
-  const [currentOperator, setCurrentOperator] = useState(null);  //*
-  const [result, setResult] = useState(null);
-  const [tempInput, setTempInpput] = useState(null);
-  const [tempOperator, setTempOperator] = useState(null);
+  
 
 
   return (
